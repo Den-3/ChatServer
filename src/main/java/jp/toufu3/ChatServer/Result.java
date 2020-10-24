@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 
 public class Result<T> {
     private T value;
-    private Status status = Status.INITIAL;
+    private Status status = Status.INITIALIZE;
 
     public Result<T> setValue(T v){
         if(v == null){
@@ -31,5 +31,5 @@ public class Result<T> {
 }
 
 enum Status{
-    SUCCESS,ERROR,INITIAL
+    SUCCESS,ERROR,INITIALIZE
 }

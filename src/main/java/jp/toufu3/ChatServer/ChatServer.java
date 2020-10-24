@@ -1,5 +1,7 @@
 package jp.toufu3.ChatServer;
 
+import spark.Spark;
+
 public class ChatServer {
     public static ChatServer single;
     public ServerConfig config;
@@ -12,7 +14,8 @@ public class ChatServer {
     }
 
     public void setUpSpark(){
-
+        Spark.port(25565);
+        new Router().setupRouter();
     }
 
 }
